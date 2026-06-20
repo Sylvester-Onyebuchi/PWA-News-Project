@@ -10,6 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $pass2 = $_POST['pass2'] ?? '';
     if ($ime === '' || $prezime === '' || $username === '' || $pass === '' || $pass2 === '') {
         $message = 'Sva polja su obavezna.';
+    } elseif (strlen($pass) < 8) {
+        $message = 'Lozinka mora imati najmanje 8 znakova.';
     } elseif ($pass !== $pass2) {
         $message = 'Lozinke nisu iste.';
     } else {
@@ -39,8 +41,8 @@ include 'header.php';
     <label>Ime<input type="text" name="ime" required></label>
     <label>Prezime<input type="text" name="prezime" required></label>
     <label>Korisničko ime<input type="text" name="username" required></label>
-    <label>Lozinka<input type="password" name="pass" required></label>
-    <label>Ponovi lozinku<input type="password" name="pass2" required></label>
+    <label>Lozinka<input type="password" name="pass" minlength="8" required></label>
+    <label>Ponovi lozinku<input type="password" name="pass2" minlength="8" required></label>
     <button type="submit">Registriraj se</button>
   </form>
 
