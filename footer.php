@@ -1,7 +1,8 @@
 </main>
 <footer class="site-footer">
   <div class="container">
-    <p>Autor: Sylvester Onah  <?php echo date("Y") ?></p>
+    <p>&copy; <?php echo date("Y"); ?> Sylvester Onah</p>
+    <p>PWA Projekt – Portal vijesti iz svijeta sporta i kulture.</p>
   </div>
 </footer>
 </body>

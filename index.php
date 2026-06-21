@@ -5,7 +5,7 @@ include 'header.php';
 ?>
 <section class="hero">
   <h1>Najnovije vijesti</h1>
-  <p>Portal izrađen prema fazama projekta: HTML/CSS, PHP forme, MySQL i sigurnost.</p>
+  <p>Pratite najnovije vijesti iz svijeta sporta i kulture te objavite vlastite članke na našem portalu.</p>
 </section>
 <?php foreach (categories() as $key => $label): ?>
 <section class="news-section">
